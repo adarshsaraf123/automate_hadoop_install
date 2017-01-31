@@ -2,10 +2,9 @@
 # II M.Tech, SSSIHL, Jan 2017
 
 
-from fabric.api import *
-from fabric.context_managers import cd
+from fabric.api import env, roles, run, hosts
 from fabric.operations import put, prompt
-from fabric.contrib.files import exists, append, sed
+from fabric.contrib.files import exists, append
 from fabric.tasks import execute
 
 slaves = ['10.0.3.101',
